@@ -1,0 +1,12 @@
+# Python Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+
+# DVC Cache and Credentials (Part A1 & C4)
+.dvc/cache
+.dvc/tmp/
+
+# Model Artifacts handled by DVC (Part A1)
+*.h5
