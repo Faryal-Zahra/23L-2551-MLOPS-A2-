@@ -10,3 +10,9 @@ __pycache__/
 
 # Model Artifacts handled by DVC (Part A1)
 *.h5
+
+# DVC-tracked data and model files
+data/raw/
+data/processed/
+models/
+reports/
