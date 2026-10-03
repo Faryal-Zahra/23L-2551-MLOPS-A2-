@@ -16,9 +16,9 @@ def preprocess():
     X_test = np.load("data/raw/X_test.npy")
     y_test = np.load("data/raw/y_test.npy")
 
-    print("Normalizing pixel values to [0, 1]...")
-    X_train = X_train / 255.0
-    X_test = X_test / 255.0
+    print("Normalizing using mean normalization...")
+    X_train = (X_train - X_train.mean()) / X_train.std()
+    X_test = (X_test - X_test.mean()) / X_test.std()
 
     print(f"Splitting validation set (test_size={test_size}, seed={seed})...")
     X_train, X_val, y_train, y_val = train_test_split(
